@@ -1,0 +1,59 @@
+.top {
+    height: 100vh;
+    position: relative;
+    background: url('./homeTop.png') no-repeat center;
+    background-size: cover;
+    &__info {
+        width: 300px;
+        height: 200px;
+        position: absolute;
+        right: 20%;
+        top: calc(50% - 100px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 50%;
+        color: white;
+
+        background-color: rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.5);
+    }
+    &__title {
+        font-size: 32px;
+        letter-spacing: 10px;
+        font-weight: 500;
+        position: relative;
+        padding: 10px;
+        &::after {
+            width: 100px;
+            height: 2px;
+            background-color: white;
+            position: absolute;
+            content: '';
+            left: calc(50% - 50px);
+            bottom: 0;
+        }
+    }
+    &__subtitle {
+        font-size: 20px;
+        margin-top: 10px;
+        font-family: 'Times New Roman', Times, serif;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 676px) {
+    .top__info {
+        left: calc(50% - 150px);
+    }
+}
+
+@media (min-width: 1300px) {
+    .top {
+        &__info {
+            scale: 1.2;
+        }
+    }
+}

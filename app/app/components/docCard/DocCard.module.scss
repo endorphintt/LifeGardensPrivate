@@ -1,0 +1,171 @@
+.card {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 100px;
+    position: relative;
+    &__title {
+        text-align: center;
+        color: white;
+        font-size: 32px;
+        letter-spacing: 5px;
+        font-weight: 600;
+        padding: 30px;
+    }
+
+    &__body {
+        width: 100%;
+        max-width: 800px;
+        overflow: hidden;
+    }
+
+    &__item {
+        background-color: white;
+        display: flex;
+        width: 100%;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        height: 70px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__info {
+        display: flex;
+        height: 100%;
+    }
+    &__names,
+    &__titles {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 10px;
+    }
+    &__names {
+        text-align: right;
+        flex-grow: 0;
+        color: gray;
+        font-size: 18px;
+        border-right: 1px solid rgb(66, 64, 64);
+    }
+
+    &__fileName {
+        font-size: 22px;
+        font-weight: 600;
+    }
+    &__fileData {
+        font-size: 17px;
+    }
+
+    &__buttons {
+        height: 60px;
+        display: flex;
+        position: relative;
+    }
+    &__download {
+        display: block;
+        height: 60px;
+        border-radius: 10px;
+        color: white;
+        background-color: #303a2a;
+        margin-right: 5px;
+        width: 60px;
+        height: 60px;
+        display: block;
+    }
+    &__more {
+        transition: 0.5s;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        bottom: 20px;
+        background-color: transparent;
+        &:after,
+        &:before {
+            position: absolute;
+            content: '';
+            width: 30px;
+            height: 2px;
+            background-color: white;
+        }
+        &:after {
+            transform: rotate(45deg);
+            left: 0px;
+        }
+        &:before {
+            transform: rotate(-45deg);
+            right: 0;
+        }
+    }
+    &__addFile {
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: white;
+        &::after {
+            position: absolute;
+            content: '';
+            width: 20px;
+            height: 2px;
+            background-color: #303a2a;
+            top: 14px;
+            left: 5px;
+        }
+        &::before {
+            position: absolute;
+            content: '';
+            width: 20px;
+            height: 2px;
+            background-color: #303a2a;
+            top: 14px;
+            left: 5px;
+            transform: rotate(90deg);
+        }
+    }
+    &__deleteFile {
+        position: absolute;
+        left: -35px;
+        top: 5px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #303a2a;
+    }
+}
+
+@media (max-width: 676px) {
+    .card {
+        &__names {
+            font-size: 14px;
+        }
+
+        &__fileName {
+            font-size: 16px;
+        }
+        &__fileData {
+            font-size: 16px;
+        }
+        &__show,
+        &__download {
+            margin: 5px;
+            color: white;
+            height: 50px;
+            background-color: #303a2a;
+            margin-right: 2px;
+        }
+        &__show {
+            padding: 0 5px 0 5px;
+            font-size: 12px;
+            letter-spacing: 0px;
+            margin-right: 1px;
+        }
+        &__download {
+            width: 50px;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.formContainer {
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 1px solid #ccc;
+    z-index: 1000; // Забезпечте, що форма буде поверх інших елементів
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #cccccc80;
+    & form {
+        & input {
+            margin: 5px;
+            width: calc(100% - 10px);
+        }
+        & button {
+            width: 100%;
+            height: 40px;
+            background-color: black;
+            color: white;
+        }
+    }
+    &.hidden {
+        display: none;
+    }
+}

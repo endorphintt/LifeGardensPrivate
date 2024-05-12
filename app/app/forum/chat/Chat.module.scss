@@ -1,0 +1,42 @@
+.chat {
+    position: relative;
+    min-height: 80%;
+}
+
+.messages {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 5px;
+    &__item {
+        margin-bottom: 10px;
+        background-color: white;
+        padding: 10px;
+        border-radius: 15px;
+        position: relative;
+    }
+    &__owner,
+    &__date {
+        color: rgb(128, 128, 128);
+    }
+    &__date {
+        text-align: end;
+    }
+    &__value {
+        font-size: 18px;
+        text-align: center;
+        width: 100%;
+        max-width: 400px;
+        padding: 10px 0 10px 0;
+        margin: 5px auto;
+    }
+    &__delete {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #303a2a;
+    }
+}

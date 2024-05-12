@@ -1,0 +1,25 @@
+.forum {
+    &__body {
+        min-height: 600px;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 800px;
+    }
+    &__buttons {
+        display: flex;
+        justify-content: center;
+    }
+    &__button {
+        border-radius: 10px;
+        background-color: #303a2a;
+        width: 150px;
+        height: 50px;
+        margin: 5px;
+        color: white;
+        font-size: 20px;
+        transition: 0.5s;
+        &:hover {
+            scale: 1.01;
+        }
+    }
+}

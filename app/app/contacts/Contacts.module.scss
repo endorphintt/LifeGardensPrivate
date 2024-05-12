@@ -1,0 +1,67 @@
+.contacts {
+    width: 100%;
+    position: relative;
+    &__body {
+        min-height: 500px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__item {
+        background-color: #303a2a;
+        border-radius: 10px;
+        padding: 10px;
+        width: calc(100% - 10px);
+        max-width: 800px;
+        margin: 5px;
+        display: flex;
+        color: white;
+        font-size: 20px;
+        position: relative;
+    }
+    &__titles,
+    &__values {
+        padding: 10px;
+    }
+    &__titles {
+        border-right: 1px solid white;
+    }
+    &__deleteContact {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #303a2a;
+    }
+    &__addContact {
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: white;
+        &::after {
+            position: absolute;
+            content: '';
+            width: 20px;
+            height: 2px;
+            background-color: #303a2a;
+            top: 14px;
+            left: 5px;
+        }
+        &::before {
+            position: absolute;
+            content: '';
+            width: 20px;
+            height: 2px;
+            background-color: #303a2a;
+            top: 14px;
+            left: 5px;
+            transform: rotate(90deg);
+        }
+    }
+}

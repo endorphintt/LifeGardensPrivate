@@ -1,0 +1,61 @@
+.book {
+    &__body {
+        width: 100%;
+        min-height: 600px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 5px;
+        color: white;
+    }
+    &__img {
+        width: 250px;
+        height: 300px;
+        background-color: #485244;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__card {
+        width: 100%;
+        max-width: 1000px;
+        border-radius: 10px;
+        background-color: #303a2a;
+        padding: 20px;
+        display: flex;
+    }
+    &__title {
+        margin-left: 20px;
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    &__text {
+        display: flex;
+    }
+    &__titles,
+    &__values {
+        margin-left: 20px;
+        min-width: 150px;
+        color: gray;
+        & p {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+    }
+    &__titles {
+        border-right: 1px solid gray;
+    }
+}
+
+@media (max-width: 676px) {
+    .book {
+        &__card {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__title {
+            text-align: center;
+            margin-top: 20px;
+        }
+    }
+}
